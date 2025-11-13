@@ -1,26 +1,22 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Services from './components/Services'
+import Work from './components/Work'
+import CTA from './components/CTA'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen w-full bg-[#06080f]">
+      <div aria-hidden className="pointer-events-none fixed inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(56,189,248,0.15),transparent_60%)]" />
+      <Navbar />
+      <main className="relative z-0">
+        <Hero />
+        <Services />
+        <Work />
+        <CTA />
+      </main>
+      <Footer />
     </div>
   )
 }
